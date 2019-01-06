@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>dimage.js</title>
+    <style>
+        .top {
+            width: 100%;
+            display: flex;
+        }
+
+        .title {
+            padding-left: 1em;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: Arial;
+            padding-left: 2em;
+        }
+
+        .logo {
+            flex-basis: 35%;
+        }
+
+        .vert-header {
+            font-size: 2em;
+            text-align: center;
+            border-right: 1px solid white;
+            width: 1em;
+            font-weight: bold;
+            filter: blur(1px)
+        }
+
+        .hor-header {
+            font-size: 2em;
+            text-align: center;
+            border-bottom: 1px solid white;
+            font-weight: bold;
+            filter: blur(1px)
+        }
+
+        .dimage-showcase {
+            text-align: center
+        }
+
+        .blur {
+            filter: blur(.5px)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wiv" data-wiv-speed=".5" data-wiv-height="5" data-wiv-tightness="4" data-wiv-thickness="6"
+        data-wiv-color="white">
+        <div style="padding-left:2em;">
+            <div class="top">
+                <div class="dimage logo" data-size="150" data-speed="60" data-image="https://media.giphy.com/media/bwY7I6FVlpByuicL1I/giphy.gif">
+                </div>
+                <div class="title">
+                    <h1 style="white-space:pre;">D I M A G E J S</h1>
+                    Never settle for two dimensions 
+                    <br>
+                    <a href="https://github.com/jjkaufman/dimage.js">https://github.com/jjkaufman/dimage.js</a><br><br>
+                    Images by : <a href="https://giphy.com/channel/laterbelunar">https://giphy.com/channel/laterbelunar</a>
+                </div>
+            </div>
+            <div class="hor-header">
+                C O N T R O L S
+            </div>
+            <br>
+            <div style="display:flex;width: 100%;">
+                <div class="vert-header">S<br>P<br>E<br>E<br>D</div>
+                <div class="dimage-showcase">
+                    <b class="blur">Slow</b>
+                    <div class="dimage" data-direction="left" data-size="150" data-speed="60" data-image="https://media.giphy.com/media/41xh8WH5YoX4Wca1AI/giphy.gif"></div>
+                </div>
+                <div class="dimage-showcase">
+                    <b class="blur">Fast</b>
+                    <div class="dimage" data-direction="left" data-size="150" data-speed="3" data-image="https://media.giphy.com/media/41xh8WH5YoX4Wca1AI/giphy.gif"></div>
+                </div>
+                <div class="dimage-showcase">
+                    <b class="blur">Turbo</b>
+                    <div class="dimage" data-direction="left" data-size="150" data-speed="1" data-image="https://media.giphy.com/media/41xh8WH5YoX4Wca1AI/giphy.gif"></div>
+                </div>
+            </div>
+            <br>
+
+            <div style="display:flex;width: 100%;">
+                <div class="vert-header">D<br>I<br>R<br>E<br>C<br>T<br>I<br>O<br>N</div>
+                <div class="dimage-showcase">
+                    <b class="blur">Righty</b>
+                    <div class="dimage" data-direction="right" data-size="250" data-speed="60" data-image="https://media.giphy.com/media/MuCbCTlXudNYDUEFEc/giphy.gif"></div>
+                </div>
+                <div class="dimage-showcase">
+                    <b class="blur">Lefty</b>
+                    <div class="dimage" data-direction="left" data-size="250" data-speed="60" data-image="https://media.giphy.com/media/MuCbCTlXudNYDUEFEc/giphy.gif"></div>
+                </div>
+            </div>
+            <br>
+            <div style="display:flex;width: 100%;">
+                <div class="vert-header">I<br>M<br>A<br>G<br>E<br>S<br> <br>&<br> <br>S<br>I<br>Z<br>E</div>
+                <div class="dimage-showcase">
+                    <div class="dimage" data-direction="right" data-size="500" data-speed="60" data-image-front="https://media.giphy.com/media/uizkQ0xx1zSpcZ7Alu/giphy.gif"
+                        data-image-right="https://media.giphy.com/media/8PjJozNDJZ9kFVlFl7/giphy.gif" data-image-left="https://media.giphy.com/media/OSQoIwDDvE2U55sCkS/giphy.gif"
+                        data-image-back="https://media.giphy.com/media/uizkQ0xx1zSpcZ7Alu/giphy.gif"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="dimage.js"></script>
+    <script src="https://jjkaufman.github.io/wiv.js/dist/wiv.js"></script>
+    <script>
+        dimage().initDimages();
+        var w = wiv.wiv();
+        w.initWivs();
+    </script>
+</body>
+
+</html>
